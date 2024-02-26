@@ -3,10 +3,10 @@ import ReactDOMServer from 'react-dom/server';
 import App from './App';
 
 export function render() {
-  const html = ReactDOMServer.renderToPipeableStream(
+  const html = ReactDOMServer.renderToString(
     <React.StrictMode>
       <App />
-    </React.StrictMode>
+    </React.StrictMode>,
   );
   return { html };
 }

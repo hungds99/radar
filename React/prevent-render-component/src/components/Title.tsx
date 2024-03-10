@@ -1,6 +1,6 @@
 const Title = () => {
   console.log('Rendering Title');
-  return <div>Optimize React Rendering</div>;
+  return <h1>Optimize React Rendering</h1>;
 };
 
 export default Title;

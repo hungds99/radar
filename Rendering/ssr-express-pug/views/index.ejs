@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('./components/header') %>
+    <main>
+      <h1><%= message %></h1>
+      <div>
+        <h4>Users List</h4>
+        <ul>
+          <% users.forEach(function(user) { %>
+          <li><%= user.name %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </main>
+    <%- include('./components/footer') %>
+  </body>
+</html>

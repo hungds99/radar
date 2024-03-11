@@ -1,7 +1,7 @@
 'use client';
 
 /* eslint-disable react/prop-types */
-import { Suspense, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function UserList() {
   const [users, setUsers] = useState<any>([]);
@@ -17,16 +17,14 @@ function UserList() {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
-      <div>
-        {users?.map((user: any) => (
-          <div key={user.id}>
-            <h2>{user.name}</h2>
-            <p>{user.email}</p>
-          </div>
-        ))}
-      </div>
-    </Suspense>
+    <div>
+      {users?.map((user: any) => (
+        <div key={user.id}>
+          <h4>{user.name}</h4>
+          <p>{user.email}</p>
+        </div>
+      ))}
+    </div>
   );
 }
 

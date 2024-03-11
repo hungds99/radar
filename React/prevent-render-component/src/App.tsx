@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 import Button from './components/Button';
 import Count from './components/Count';
@@ -8,13 +8,12 @@ export default function PreventRender() {
   const [age, setAge] = useState(1);
   const [salary, setSalary] = useState(1000);
 
-  const incrementAge = useCallback(() => {
+  const incrementAge = () => {
     setAge(age + 1);
-  }, [age]); // dependency array, re-create this function only when `age` changes
-
-  const incrementSalary = useCallback(() => {
+  };
+  const incrementSalary = () => {
     setSalary(salary + 1000);
-  }, [salary]); // re-create this function only when `salary` changes
+  };
 
   return (
     <div className='App' style={{ textAlign: 'center' }}>

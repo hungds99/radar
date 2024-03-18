@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
+<html lang="en">
+  <%- include('./components/head') %>
   <body>
     <%- include('./components/header') %>
     <main>
-      <h1><%= message %></h1>
-      <div>
-        <h4>Users List</h4>
+      <%- include('./components/sidebar') %>
+      <div class="content">
+        <h3><%= message %></h3>
         <ul>
-          <% users.forEach(function(user) { %>
-          <li><%= user.name %></li>
+          <% posts.forEach(function(post) { %>
+          <li>
+            <a href="/posts/<%= post.id %>"><%= post.title %></a>
+          </li>
           <% }); %>
         </ul>
       </div>

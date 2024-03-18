@@ -7,14 +7,11 @@
   <body>
     <%- include('./components/header') %>
     <main>
-      <h1><%= message %></h1>
-      <div>
-        <h4>User Detail</h4>
-        <ul>
-          <li><%= user.name %></li>
-          <li><%= user.email %></li>
-          <li><%= user.phone %></li>
-        </ul>
+      <%- include('./components/sidebar') %>
+      <div class="content">
+        <h3><%= message %></h3>
+        <h4>Title: <%= post.title %></h4>
+        <p>Content: <%= post.body %></p>
       </div>
     </main>
     <%- include('./components/footer') %>

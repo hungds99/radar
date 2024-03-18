@@ -14,34 +14,30 @@ app.set('views', path.join(__dirname, 'views'));
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// define a route to render our index view
 app.get('/', async (req, res) => {
-  // Get list users from json placeholder API
-  const response = await fetch('https://jsonplaceholder.typicode.com/users');
-  const users = await response.json();
-  console.log(users);
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await response.json();
+  console.log(posts);
 
   res.render('index', {
     title: 'Home',
-    message: 'Loading data from the server...',
-    users: users,
+    message: 'Render all posts from the server...',
+    posts: posts,
   });
 });
 
-// define a route to render user details view
-app.get('/users/:id', async (req, res) => {
-  const userId = req.params.id;
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
-  const user = await response.json();
-  console.log(user);
+app.get('/posts/:id', async (req, res) => {
+  const postId = req.params.id;
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+  const post = await response.json();
 
-  res.render('user', {
-    title: 'User Details',
-    message: 'Loading user details from the server...',
-    user: user,
+  res.render('post', {
+    title: 'Post Details',
+    message: 'Render post from the server...',
+    post: post,
   });
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App is listening on port ${port}`);
 });

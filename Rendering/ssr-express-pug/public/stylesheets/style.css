@@ -1,30 +1,52 @@
+/* Add Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Reset styles */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Add Google font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Your custom styles go here */
+/* Body */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
+/* Header */
 header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-color: #c1aeae;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
 }
 
+/* Main */
 main {
-  padding: 80px 0;
+  display: flex;
+  flex: 1;
 }
 
+main .sidebar {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+main .content {
+  flex: 1 1 auto;
+  width: 75%;
+}
+
+.content h3 {
+  text-align: center;
+}
+
+/* Footer */
 footer {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-color: #663737;
+  padding: 1rem;
+  text-align: center;
 }

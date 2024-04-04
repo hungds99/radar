@@ -8,7 +8,7 @@
 }
 
 /* Body */
-body {
+#root {
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;

@@ -1,3 +1,7 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 /* Add Google font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -48,4 +52,9 @@ footer {
   background-color: #663737;
   padding: 1rem;
   text-align: center;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
 }

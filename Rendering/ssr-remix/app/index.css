@@ -49,3 +49,8 @@ footer {
   padding: 1rem;
   text-align: center;
 }
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}

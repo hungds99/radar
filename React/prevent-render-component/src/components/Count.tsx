@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { memo } from 'react';
+
 const Count = ({ text, count }: any) => {
   console.log(`Rendering ${text}`);
   return (
@@ -9,4 +11,4 @@ const Count = ({ text, count }: any) => {
   );
 };
 
-export default Count;
+export default memo(Count);

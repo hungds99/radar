@@ -1,6 +1,6 @@
-import Footer from '@/components/ui/Footer';
-import Header from '@/components/ui/Header';
-import Sidebar from '@/components/ui/Sidebar';
+import Footer from '@/components/ui/footer';
+import Header from '@/components/ui/header';
+import Sidebar from '@/components/ui/sidebar';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';

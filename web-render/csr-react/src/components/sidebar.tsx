@@ -1,27 +1,11 @@
-import { useState } from 'react';
-
-const colors = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99'];
+import MagicButton from './magic-button';
 
 const Sidebar = () => {
-  const [color, setColor] = useState(colors[0]);
-
-  const handleChangeColor = () => {
-    const index = Math.floor(Math.random() * colors.length);
-    setColor(colors[index]);
-  };
-
   return (
     <div className='sidebar'>
-      <h4
-        style={{
-          color: color,
-        }}
-      >
-        Sidebar
-      </h4>
-      <button color={color} onClick={handleChangeColor}>
-        Magic Button
-      </button>
+      <h4>Sidebar</h4>
+      <br />
+      <MagicButton />
     </div>
   );
 };

@@ -17,11 +17,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', async (req, res) => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await response.json();
-  console.log(posts);
 
   res.render('index', {
     title: 'Home',
-    message: 'Render all posts from the server...',
+    message: 'Express + EJS - Server Side Rendering',
     posts: posts,
   });
 });
@@ -33,7 +32,7 @@ app.get('/posts/:id', async (req, res) => {
 
   res.render('post', {
     title: 'Post Details',
-    message: 'Render post from the server...',
+    message: 'Express + EJS - Server Side Rendering',
     post: post,
   });
 });

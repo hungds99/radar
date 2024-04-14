@@ -13,7 +13,8 @@ export default async function Post({ params }: any) {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <h3>Render Post with id: {post.id} in client...</h3>
+        <h2>NextJS - Server Side Rendering</h2>
+        <br />
         <h4>Title: {post.title}</h4>
         <p>Body: {post.body}</p>
       </Suspense>

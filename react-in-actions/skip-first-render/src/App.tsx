@@ -1,28 +1,23 @@
 import { useEffect, useRef } from 'react';
 import './App.css';
 
-function App() {
-  const btnRef = useRef<HTMLButtonElement>(null);
+export default function App() {
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      return;
+    }
+
     console.info('=> useEffect: First render');
-  }, [btnRef.current]);
+  }, []);
 
   return (
     <div>
       <h2>
         React Render Optimize: Skip first <em>useEffect</em> render !!!
       </h2>
-      <button
-        ref={btnRef}
-        onClick={() => {
-          btnRef.current?.style.setProperty('background-color', '#f00');
-        }}
-      >
-        Click me
-      </button>
+      <button>Click me</button>
     </div>
   );
 }
-
-export default App;

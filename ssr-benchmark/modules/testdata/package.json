@@ -1,8 +1,0 @@
-{
-  "name": "testdata",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "build": "true"
-  }
-}

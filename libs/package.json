@@ -1,7 +1,8 @@
 {
   "type": "commonjs",
   "dependencies": {
-    "heic-convert": "^2.1.0"
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@types/node": "^20.12.7"

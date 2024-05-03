@@ -1,21 +1,16 @@
 import { useState, useTransition } from 'react';
+import { updateName } from './action-helper';
 
-const updateName = async (name: string) => {
-  return new Promise((resolve) =>
-    setTimeout(() => (name === 'error' ? resolve('error') : resolve('success')), 1000),
-  );
-};
-
-export default function ActionDemo() {
+export default function UseTransitionDemo() {
   return (
     <>
-      <OldActionDemo />
-      <NewActionDemo />
+      <BeforeUseTransitionDemo />
+      <AfterUseTransitionDemo />
     </>
   );
 }
 
-export function OldActionDemo() {
+export function BeforeUseTransitionDemo() {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [isPending, setIsPending] = useState(false);
@@ -42,7 +37,7 @@ export function OldActionDemo() {
   );
 }
 
-export function NewActionDemo() {
+export function AfterUseTransitionDemo() {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
 

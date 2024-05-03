@@ -1,10 +1,10 @@
-import ActionDemo from './actions/demo';
+import UseTransitionDemo from './actions/use-transition';
 import './App.css';
 
 function App() {
   return (
     <>
-      <ActionDemo />
+      <UseTransitionDemo />
     </>
   );
 }

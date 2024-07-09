@@ -40,25 +40,16 @@
 
 /* field-sizing: content */
 .field-content > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
 
   textarea {
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 0.5em;
+    field-sizing: content;
   }
 
   input {
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 0.5em;
+    field-sizing: content;
   }
 
   select {
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 0.5em;
+    field-sizing: content;
   }
 }

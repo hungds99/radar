@@ -53,3 +53,7 @@
     field-sizing: content;
   }
 }
+
+@view-transition {
+  navigation: auto;
+}

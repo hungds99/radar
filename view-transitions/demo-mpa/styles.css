@@ -1,45 +1,8 @@
-/* MPAs view transition */
-
-::view-transition {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
+@view-transition {
+  navigation: auto;
 }
 
-
-::view-transition-group {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-::view-transition-old,
-::view-transition-new {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
-
-::view-transition-old() {
-  animation: 0.4s ease-in both move-out;
-}
-
-::view-transition-new() {
-  animation: 0.4s ease-in both move-in;
-}
-
-/* Custom animation */
+/* Create a custom animation */
 @keyframes move-out {
   from {
     transform: translateY(0%);
@@ -58,4 +21,13 @@
   to {
     transform: translateY(0%);
   }
+}
+
+/* Apply the custom animation to the old and new page states */
+::view-transition-old(root) {
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.4s ease-in both move-in;
 }

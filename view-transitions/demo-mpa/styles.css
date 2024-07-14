@@ -1,25 +1,45 @@
-body {
-  font-family: Arial, sans-serif;
+/* MPAs view transition */
+
+::view-transition {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+
+::view-transition-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-/* MPAs view transition */
-/* ::view-transition {
-  background-color: red;
-  opacity: 0.5;
+::view-transition-old,
+::view-transition-new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
-*/
 
-/* @view-transition {
-  navigation: auto;
-} */
 
-/* Create a custom animation */
+::view-transition-old() {
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new() {
+  animation: 0.4s ease-in both move-in;
+}
+
+/* Custom animation */
 @keyframes move-out {
   from {
     transform: translateY(0%);
@@ -38,13 +58,4 @@ body {
   to {
     transform: translateY(0%);
   }
-}
-
-/* Apply the custom animation to the old and new page states */
-::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
-}
-
-::view-transition-new(root) {
-  animation: 0.4s ease-in both move-in;
 }

@@ -1,6 +1,23 @@
-@view-transition {
-  navigation: auto;
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
 }
+
+/* MPAs view transition */
+/* ::view-transition {
+  background-color: red;
+  opacity: 0.5;
+}
+*/
+
+/* @view-transition {
+  navigation: auto;
+} */
 
 /* Create a custom animation */
 @keyframes move-out {

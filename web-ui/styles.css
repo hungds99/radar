@@ -40,17 +40,25 @@
 
 /* field-sizing: content */
 .field-content > div {
-
   textarea {
     field-sizing: content;
+
+    min-block-size: 3.5rlh;
+    min-inline-size: 20ch;
+    max-inline-size: 50ch;
   }
 
   input {
     field-sizing: content;
+
+    min-inline-size: 7ch;
   }
 
   select {
     field-sizing: content;
+
+    min-inline-size: 5ch;
+    min-block-size: 1.5lh;
   }
 }
 

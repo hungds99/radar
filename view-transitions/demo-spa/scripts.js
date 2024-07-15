@@ -1,9 +1,9 @@
 const images = [
-  "https://picsum.photos/id/25/400/300",
-  "https://picsum.photos/id/26/400/300",
-  "https://picsum.photos/id/27/400/300",
-  "https://picsum.photos/id/28/400/300",
-  "https://picsum.photos/id/29/400/300",
+  'https://picsum.photos/id/25/400/300',
+  'https://picsum.photos/id/26/400/300',
+  'https://picsum.photos/id/27/400/300',
+  'https://picsum.photos/id/28/400/300',
+  'https://picsum.photos/id/29/400/300',
 ];
 let currentIndex = 0;
 
@@ -11,11 +11,13 @@ function updateImage(newIndex) {
   if (newIndex < 0 || newIndex >= images.length) return;
 
   if (!document.startViewTransition) {
-      updateDOM(newIndex);
-      return;
+    updateDOM(newIndex);
+    return;
   }
 
-  document.startViewTransition(() => updateDOM(newIndex));
+  document.startViewTransition(() => {
+    updateDOM(newIndex);
+  });
 }
 
 function updateDOM(newIndex) {
@@ -43,19 +45,19 @@ function updateButtons() {
 function createThumbnails() {
   const thumbnailsContainer = document.getElementById('thumbnails');
   images.forEach((src, index) => {
-      const thumbnail = document.createElement('img');
-      thumbnail.src = src;
-      thumbnail.alt = `Thumbnail ${index + 1}`;
-      thumbnail.className = 'thumbnail';
-      thumbnail.onclick = () => updateImage(index);
-      thumbnailsContainer.appendChild(thumbnail);
+    const thumbnail = document.createElement('img');
+    thumbnail.src = src;
+    thumbnail.alt = `Thumbnail ${index + 1}`;
+    thumbnail.className = 'thumbnail';
+    thumbnail.onclick = () => updateImage(index);
+    thumbnailsContainer.appendChild(thumbnail);
   });
 }
 
 function updateThumbnails() {
   const thumbnails = document.querySelectorAll('.thumbnail');
   thumbnails.forEach((thumb, index) => {
-      thumb.classList.toggle('active', index === currentIndex);
+    thumb.classList.toggle('active', index === currentIndex);
   });
 }
 

@@ -1,5 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @view-transition {
   navigation: auto;
+}
+
+:root {
+  view-transition-name: root;
+}
+
+.head {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 1em;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+  view-transition-name: head;
 }
 
 /* Create a custom animation */
@@ -23,11 +43,13 @@
   }
 }
 
-/* Apply the custom animation to the old and new page states */
-::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
+::view-transition-group(root) {
 }
-
+::view-transition-image-pair(root) {
+}
+::view-transition-old(root) {
+  animation: 0.1s ease-in both move-out;
+}
 ::view-transition-new(root) {
-  animation: 0.4s ease-in both move-in;
+  animation: 0.1s ease-in both move-in;
 }

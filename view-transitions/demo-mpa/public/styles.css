@@ -72,9 +72,9 @@
 }
 ::view-transition-old(root) {
   /* animation: 0.1s ease-in both move-out; */
-  animation: fadeOutLeft 1s ease-in forwards;
+  animation: fadeOutLeft 0.1s ease-in forwards;
 }
 ::view-transition-new(root) {
   /* animation: 0.1s ease-in both move-in; */
-  animation: fadeInRight 1s ease-out forwards;
+  animation: fadeInRight 0.1s ease-out forwards;
 }

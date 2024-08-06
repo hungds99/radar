@@ -18,20 +18,18 @@ img {
 
 @view-transition {
   navigation: auto;
-  types: slide, forwards;
 }
 
 /* Page transition separate component  */
-/* .header {
+.header {
   view-transition-name: page-header;
 }
 
 .main {
   view-transition-name: page-main;
-} */
+}
 
 /* Root transition */
-/* 
 @keyframes fade-and-scale-in {
   from {
     opacity: 0;
@@ -62,10 +60,9 @@ img {
 
 ::view-transition-new(root) {
   animation: fade-and-scale-in 1s ease-in-out 1 forwards;
-} */
+}
 
 /* Header transition */
-/* 
 @keyframes hide {
   from {
     opacity: 1;
@@ -88,9 +85,6 @@ img {
   }
 }
 
-::view-transition-old(page-header) {
-  animation: hide 1s ease-in-out 1 forwards;
-}
 
 @keyframes slide-right {
   from {
@@ -104,22 +98,24 @@ img {
   }
 }
 
-::view-transition-new(page-header) {
+/* ::view-transition-old(page-header) {
+  animation: hide 1s ease-in-out 1 forwards;
+} */
+/* ::view-transition-new(page-header) {
   animation: slide-right 2s ease-in-out 1 forwards;
 } */
 
 /* Main transition */
-/* 
 ::view-transition-old(page-main) {
   animation: hide 1s ease-in-out 1 forwards;
 }
 
 ::view-transition-new(page-main) {
-  animation: slide-left 2.5s ease-in-out 1 forwards;
-} */
+  animation: slide-left 1s ease-in-out 1 forwards;
+}
 
 /* Create a custom animation */
-/* @keyframes move-out {
+@keyframes move-out {
   from {
     transform: translateY(0%);
   }
@@ -137,16 +133,16 @@ img {
   to {
     transform: translateY(0%);
   }
-} */
+}
 
 /* Apply the custom animation to the old and new page states */
-/* ::view-transition-old(root) {
-  animation: 0.4s ease-in both move-out;
+::view-transition-old(root) {
+  animation: 0.1s ease-in both move-out;
 }
 
 ::view-transition-new(root) {
-  animation: 0.4s ease-in both move-in;
-} */
+  animation: 0.1s ease-in both move-in;
+}
 
 /*
 * --------------------------------------------------

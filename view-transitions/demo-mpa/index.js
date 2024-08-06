@@ -12,12 +12,18 @@ app.get('/', (req, res) => {
 });
 
 // Route to serve about.html
-app.get('/about', (req, res) => {
+app.get('/about', async (req, res) => {
+  console.log("Sleeping for 5 seconds");
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log("Woke up after 5 seconds");
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
 // Route to serve home.html
-app.get('/home', (req, res) => {
+app.get('/home', async (req, res) => {
+  console.log("Sleeping for 5 seconds");
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log("Woke up after 5 seconds");
   res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 

@@ -116,11 +116,16 @@ function RecommendedProducts({
                       to={`/products/${product.handle}`}
                       onClick={(e) => {
                         e.preventDefault();
-                        document.startViewTransition(() => {
-                          navigate(`/products/${product.handle}`);
-                        });
+                        document.startViewTransition(() =>
+                          navigate(`/products/${product.handle}`),
+                        );
                       }}
                     >
+                      {/* <a
+                      key={product.id}
+                      className="recommended-product"
+                      href={`/products/${product.handle}`}
+                    > */}
                       <Image
                         data={product.images.nodes[0]}
                         aspectRatio="1/1"
@@ -130,6 +135,7 @@ function RecommendedProducts({
                       <small>
                         <Money data={product.priceRange.minVariantPrice} />
                       </small>
+                      {/* </a> */}
                     </Link>
                   ))
                 : null}
